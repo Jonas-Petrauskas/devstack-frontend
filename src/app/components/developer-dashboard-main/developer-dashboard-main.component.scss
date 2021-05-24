@@ -1,0 +1,139 @@
+@use '../../../themes/components' as components;
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  width: 63vw;
+  margin-top: 10vh;
+  max-width: 800px;
+  margin-bottom: 2vh;
+  padding: 2vh;
+
+  @include components.container_style;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-name {
+  display: flex;
+  flex-direction: row;
+  height: 26vh;
+  margin-top: 3vh;
+}
+
+.user-photo {
+  height: 120px;
+  width: 120px;
+  border-radius: 5rem;
+  border: 1px solid #202020;
+}
+
+.carreer-details {
+  display: inline-flex;
+  margin-top: 1vh;
+  font-size: 20px;
+}
+
+.name-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40vw;
+  height: 100%;
+  margin-top: 5vh;
+  padding-left: 2vw;
+}
+
+.names {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3.5vh;
+  margin-top: 22px;
+  margin: 0 1px;
+  div {
+    margin: 5px;
+  }
+  a {
+    font-size: 32;
+    margin-left: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.links {
+  margin-left: 2%;
+}
+
+.exp-position {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  height: 0.5vh;
+}
+
+.exp-item {
+  margin: 5px;
+  letter-spacing: 1px;
+}
+
+.techs-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.tech {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tech-image {
+  height: 30px;
+  width: 30px;
+}
+
+.bio {
+  text-align: left;
+  padding: 10px 40px 30px 40px;
+  line-height: 1.5;
+}
+
+.techs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech {
+  flex: 1;
+  padding: 0 1vw;
+}
+
+.dev__line {
+  border-top: 1px solid #202020;
+  width: 100%;
+  height: 2px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}

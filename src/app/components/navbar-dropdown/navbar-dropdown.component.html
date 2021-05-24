@@ -1,0 +1,28 @@
+
+<div
+  class="button"
+  (mouseenter)="clickHandler()"
+  (mouseleave)="clickHandler()"
+>
+
+  <div class="button__persistent">
+    <div class="button__persistent__name">{{buttonName}}</div>
+    <img
+      class="button__persistent__arrow"
+      src="../../../assets/img/navbar-dropdown-down-arrow.png"
+    >
+  </div>
+
+  <div
+    *ngIf="expanded"
+    class="button__dropdowns"
+    [ngClass]="blurBackground || expanded ? 'blurred' : ''"
+  >
+    <div
+      *ngFor="let option of dropdownOptions"
+      (click)="dropdownClickHandler(option.link)"
+      class="button__dropdowns__dropdown"
+    >{{option.label}}</div>
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+
+<div class="login">
+
+  <div class="login__title">Login</div>
+  <div class="line"></div>
+
+  <form class="login__form" (keydown)="submitOnEnter($event)">
+
+    <input
+      name="username"
+      class="login__form__input"
+      placeholder="Username"
+      [(ngModel)]="username"
+    >
+    <br>
+    <input
+      type="password"
+      name="password"
+      class="login__form__input"
+      placeholder="Password"
+      [(ngModel)]="password"
+    >
+    <br>
+
+    <div class="login__form__remember-me">
+      <input class="login__form__remember-me__checkbox" type="checkbox">
+      <div class="login__form__remember-me__text">Remember me</div>
+    </div>
+
+    <a (click)="submit()" class="login__form__submit">Login</a>
+
+  </form>
+
+</div>

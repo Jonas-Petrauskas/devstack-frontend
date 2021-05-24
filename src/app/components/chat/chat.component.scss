@@ -1,0 +1,148 @@
+.chat-container {
+  width: 284px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 3px;
+  right: 5px;
+  margin-top: 60px;
+}
+
+.active-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.btn {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-down {
+  cursor: pointer;
+  transform: scaleY(-1);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #c7c8cf;
+}
+
+.chat-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 274px;
+  height: 54px;
+}
+
+img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+}
+
+.user-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 9px;
+}
+
+.svg-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 4px;
+  .back-button {
+    cursor: pointer;
+    transform: rotate(-90deg);
+  }
+  svg {
+    margin: 0 6px;
+  }
+}
+
+.expanded-chat {
+  border-bottom: 1px solid #c7c8cf;
+  height: 430px;
+  width: 97%;
+}
+.chat-preview {
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #c7c8cf;
+  cursor: pointer;
+  padding: 3px 6px 0 6px;
+
+  .chat-photo {
+    margin-left: 9px;
+  }
+  .chat-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    width: 223px;
+    .last-message {
+      font-size: 12px;
+    }
+    .name-date {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .time {
+        font-size: 13px;
+        color: #909090;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.msg-container {
+  display: flex;
+  flex-flow: column-reverse;
+  overflow-y: scroll;
+  height: 334px;
+  width: 100%;
+  padding: 0 5px;
+}
+
+.user-input {
+  padding: 3px 4px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid #c5c2c25c;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  margin-top: 3px;
+  background-color: ghostwhite;
+}
+
+.unreads {
+  text-align: center;
+  font-size: 10px;
+  font-weight: bolder;
+  margin-left: 10px;
+  background-color: rgba($color: #6c6cff, $alpha: 0.5);
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+.opened-chat {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}

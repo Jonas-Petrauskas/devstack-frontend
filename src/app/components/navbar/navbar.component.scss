@@ -1,0 +1,65 @@
+@use "../../../themes/sizes" as size;
+@use "../../../themes/fonts" as font;
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: size.$navbar_height;
+  user-select: none;
+  transition: all 1s;
+}
+
+.blurred {
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
+  transition: all 1s;
+}
+
+.navbar__logo {
+  font-weight: bold;
+  font-size: size.$navbar_logo_text;
+  font-family: font.$logo;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.navbar__buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.navbar__buttons__button {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes color-fill {
+  from {
+    background: none;
+  }
+  to {
+    background-color: rgba($color: #000000, $alpha: 0.25);
+  }
+}
+.login {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  top: 0;
+  animation: color-fill 0.8s forwards;
+}
+.login__page-filler {
+  width: 100%;
+}
+.login__window {
+  animation: slide-left 0.8s forwards;
+}

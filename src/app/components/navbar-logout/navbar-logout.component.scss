@@ -1,0 +1,13 @@
+@use "../../../themes/sizes" as size;
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: size.$navbar_dropdown_height;
+  width: size.$navbar_dropdown_width;
+}
+.button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,80 @@
+@use "../../../themes/components" as components;
+@use "../../../themes/buttons";
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+}
+
+.signup__form {
+  @include components.container_style;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+}
+
+.signup__title {
+  font-size: 36px;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.signup__form__line {
+  width: 400px;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border: none;
+  padding: 1rem 1rem;
+  outline-width: 0;
+  user-select: none;
+}
+
+.signup__form__textbox {
+  padding: 1rem;
+  min-width: 400px;
+  min-height: 100px;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  border: none;
+  outline-width: 0;
+  user-select: none;
+  resize: none;
+}
+
+button {
+  width: 100%;
+}
+
+.blurred-background {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  .form-confirmation {
+    padding: 5rem 3rem;
+    @include components.container_style;
+    .text {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .secondary-text {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}

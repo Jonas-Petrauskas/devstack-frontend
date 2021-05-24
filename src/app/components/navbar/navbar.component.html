@@ -1,0 +1,56 @@
+
+<nav 
+  class="navbar" 
+  [ngClass]="blurBackground || mouseIn ? 'blurred' : ''" 
+  (mouseenter)="mouseenterHandler()" 
+  (mouseleave)="mouseleaveHandler()"
+>
+  <div class="navbar__logo" routerLink="/">DevStack</div>
+
+  <div *ngIf="state === 'loggedOut'" class="navbar__buttons" >
+
+    <app-navbar-dropdown
+      class="navbar__buttons__button"
+      [expanded]="loginExpanded"
+      [blurBackground]="blurBackground"
+      (toggle)="onLoginToggle($event)"
+      (sliderHandler)="sliderHandler($event)"
+      buttonName="LOG IN"
+      [dropdownOptions]="getLoginOptions()"
+    ></app-navbar-dropdown>
+
+    <app-navbar-dropdown
+      class="navbar__buttons__button"
+      [expanded]="signupExpanded"
+      [blurBackground]="blurBackground"
+      (toggle)="onSignupToggle($event)"
+      (sliderHandler)="sliderHandler($event)"
+      buttonName="SIGN UP"
+      [dropdownOptions]="getSignupOptions()"
+    ></app-navbar-dropdown>
+
+  </div>
+
+  <div *ngIf="state !== 'loggedOut'" class="navbar__buttons">
+    <app-navbar-logout
+      buttonName="LOG OUT"
+      class="navbar__buttons__button"
+    ></app-navbar-logout>
+  </div>
+
+
+</nav>
+
+<div *ngIf="showCompanyLogin" class="login">
+  <div class="login__page-filler" (click)="hideLogin()"></div>
+  <div class="login__window">
+    <app-company-login></app-company-login>
+  </div>
+</div>
+
+<div *ngIf="showDeveloperLogin" class="login">
+  <div class="login__page-filler" (click)="hideLogin()"></div>
+  <div class="login__window">
+    <app-developer-login></app-developer-login>
+  </div>
+</div>

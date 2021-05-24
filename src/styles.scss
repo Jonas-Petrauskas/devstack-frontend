@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@use "./themes/colors" as color;
+@use "./themes/fonts" as font;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: color.$text;
+  font-family: font.$main;
+}

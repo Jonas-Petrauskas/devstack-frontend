@@ -1,0 +1,18 @@
+
+<div title="searchBar" class="selector">
+
+  <div>
+
+    <input title="searchBar" #userInput [value]="searchString" (input)="search(userInput.value)" [placeholder]="placeString" class="search-input">
+
+    <div title="searchBar" *ngFor="let selected of selectedOptions" class="selected-option" (click)="unSelectOption(selected)">
+        {{selected.name}}
+    </div>
+
+    <div title="searchBar" *ngFor="let option of filteredOptions" (click)="selectOption(option)" class="option">
+        {{option.name}}
+    </div>
+
+  </div>
+
+</div>

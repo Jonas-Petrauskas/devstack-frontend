@@ -1,0 +1,55 @@
+@use "../../../themes/sizes" as size;
+
+.blurred {
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
+  transition: all 1s;
+}
+
+.button__persistent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: size.$navbar_dropdown_height;
+  width: size.$navbar_dropdown_width;
+}
+.button__persistent:hover {
+  cursor: pointer;
+}
+
+.button__persistent__name {
+  margin-right: 15px;
+}
+
+.button__persistent__arrow {
+  height: 20px;
+  width: 20px;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  50% {
+    transform: position(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.button__dropdowns {
+  position: absolute;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.button__dropdowns__dropdown {
+  text-align: center;
+  line-height: size.$navbar_dropdown_height;
+  width: size.$navbar_dropdown_width;
+}
+.button__dropdowns__dropdown:hover {
+  cursor: pointer;
+}

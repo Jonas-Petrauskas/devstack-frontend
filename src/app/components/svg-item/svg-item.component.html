@@ -1,0 +1,9 @@
+
+<div
+  class="svg-container"
+  (mouseover)="showLabel=true"
+  (mouseout)="showLabel=false">
+
+  <div [innerHTML]="svg"></div>
+  <div *ngIf="showLabel" class="svg-container__label">{{label}}</div>
+</div>

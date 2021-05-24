@@ -1,0 +1,13 @@
+
+<div class="user-container">
+
+    <!-- container to render the users -->
+    <div *ngIf="user" class="user-main-container">
+    
+      <app-developer-dashboard-main [user]="user"></app-developer-dashboard-main>
+      <app-developer-dashboard-other 
+        [educationHistory]="user.education_history" 
+        [employmentHistory]="user.employment_history"
+      ></app-developer-dashboard-other>
+    </div>
+</div>

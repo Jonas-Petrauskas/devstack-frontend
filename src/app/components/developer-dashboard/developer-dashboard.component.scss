@@ -1,0 +1,15 @@
+@use '../../../themes/components' as components;
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.user-main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+

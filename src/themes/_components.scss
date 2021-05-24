@@ -1,0 +1,7 @@
+@mixin container_style {
+  background-color: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+  backdrop-filter: blur(10px) saturate(100%) contrast(50%) brightness(130%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+}
+//

@@ -1,0 +1,43 @@
+
+<div class="login">
+
+<div class="login__title">Login</div>
+
+<div class="login__OAuth">
+  <a class="login__OAuth__button">Google</a>
+  <a class="login__OAuth__button">GitHub</a>
+</div>
+
+<div class='login__or'>
+  <div class="login__or__line"></div>
+  <div class="login__or__text">or</div>
+  <div class="login__or__line"></div>
+</div>
+
+<form class="login__form">
+
+  <input
+    name="email"
+    class="login__form__input"
+    placeholder="Email"
+    [(ngModel)]="email"
+  >
+  <br>
+  <input
+    type="password"
+    name="password"
+    class="login__form__input"
+    placeholder="Password"
+    [(ngModel)]="password"
+  >
+  <br>
+
+  <div class="login__form__remember-me">
+    <input class="login__form__remember-me__checkbox" type="checkbox">
+    <div class="login__form__remember-me__text">Remember me</div>
+  </div>
+
+  <a (click)="submit()" class="login__form__submit">Login</a>
+
+</form>
+</div>

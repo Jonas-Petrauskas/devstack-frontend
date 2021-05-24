@@ -1,0 +1,81 @@
+<div class="chat-container" *ngIf="appState !== 'loggedOut'">
+
+  <div class="chat-bar" >
+    <div class="user-photo" *ngIf="appState === 'company'">
+      <img
+        [src]="chatIsOpen ? chats[openIndex].developer.photo_path : activeUser.photo_path"
+        alt="user photo"
+      >
+    </div>
+    <div class="user-photo" *ngIf="appState === 'developer'">
+      <img
+        [src]="chatIsOpen ? chats[openIndex].company.photo_path : activeUser.photo_path"
+        alt="user photo"
+      >
+    </div>
+    <div *ngIf="!chatIsOpen" class="active-name">{{activeUser.name}}</div>
+    <div *ngIf="chatIsOpen && appState === 'developer'" class="active-name">
+      {{chats[openIndex].company.name}}
+    </div>
+    <div *ngIf="chatIsOpen && appState === 'company'" class="active-name">
+      {{chats[openIndex].developer.first_name + ' ' + chats[openIndex].developer.last_name}}
+    </div>
+    <div *ngIf="totalUnreads > 0 && !expanded && !chatIsOpen">
+      <div class="unreads">{{totalUnreads}}</div>
+    </div>
+    <div class="svg-icons">
+      <div class="back-button" *ngIf="chatIsOpen" (click)="closeChat()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false"><path d="M15 11L8 6.39 1 11V8.61L8 4l7 4.61z"></path></svg></div>
+      <div (click)="expandChat()" *ngIf="!chatIsOpen" [ngClass]="!expanded? 'btn' : 'btn-down'"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false"><path d="M15 11L8 6.39 1 11V8.61L8 4l7 4.61z"></path></svg></div>
+    </div>
+  </div>
+
+  <div class="expanded-chat" *ngIf="expanded">
+
+    <div class="chat-preview" *ngFor="let chat of chats; let i = index">
+      <div class="chat-photo">
+        <img
+          [src]="appState === 'developer' ? chat.company.photo_path : chat.developer.photo_path"
+          alt="user photo"
+        >
+      </div>
+      <div class="chat-text" (click)="selectChat(i)">
+        <div class="name-date">
+          <div *ngIf="appState == 'company'">{{chat.developer.first_name + ' ' + chat.developer.last_name}}</div>
+          <div *ngIf="appState == 'developer'">{{chat.company.name}}</div>
+          <div *ngIf="appState == 'developer'">
+            <div class="unreads" *ngIf="chat.developer_unreads">{{chat.developer_unreads}}</div>
+          </div>
+          <div *ngIf="appState == 'company'">
+            <div class="unreads" *ngIf="chat.company_unreads">{{chat.company_unreads}}</div>
+          </div>
+          <div class="time">{{chat.last_timestamp | date :'shortTime'}}</div>
+        </div>
+        <div class="last-messge" *ngIf="chat.messages[0]">
+          {{chat.messages[0].text_content}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="opened-chat" *ngIf="chatIsOpen && chats[openIndex]" id="msgContainer">
+
+    <div class="msg-container">
+      <div *ngFor="let message of chats[openIndex].messages" id="msgContainer">
+        <app-message
+          [message]="message"
+          [company]="chats[openIndex].company"
+          [developer]="chats[openIndex].developer"
+        ></app-message>
+      </div>
+    </div>
+
+    <input
+      [(ngModel)]="userInput"
+      (keyup.enter)="sendMessage(userInput)"
+      class="user-input"
+      placeholder="Type your message here..."
+    >
+
+  </div>
+
+</div>

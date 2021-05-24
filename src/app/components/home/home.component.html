@@ -1,0 +1,85 @@
+
+<div class="home-container">
+
+  <!-- row -->
+  <section >
+
+    <div class="row">
+      <img
+        src="../../../assets/img/deal-image.jpeg"
+        alt="couple looking at laptop"
+      >
+      <div class="get-started-container">
+
+        <div class="header">Welcome to<br>Devstack</div>
+
+        <div class="large-text">
+          DevStack is Europe's leading developer-focused
+          job platform. <br> Create a profile and
+          let companies apply to you.
+        </div>
+
+        <div class="button-row">
+          <button>Find Me a Job!</button>
+          <div style="width: 3rem;"></div>
+          <button
+            routerLink="company/signup" routerLinkActive="active"
+          >I'm Hiring</button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- cards -->
+  <section>
+
+    <div class="cards-div">
+      <div class="cards-container">
+
+        <div class="header">Top Jobs for Top Tech Talent</div>
+
+        <div class="dim-subheader">
+          Be part of the top 10% and connect with Europe’s top tech companies.
+        </div>
+
+        <div class="cards">
+          <app-home-job-card [cardData]="card1" ></app-home-job-card>
+          <app-home-job-card [cardData]="card2" class="cards__middle"></app-home-job-card>
+          <app-home-job-card [cardData]="card3" ></app-home-job-card>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- logos -->
+  <section>
+
+    <div class="logos-container">
+      <div class="logos-subheader">
+        +100 companies have already hired using DevStack
+      </div>
+      <div class="app-logos">
+        <app-company-logos></app-company-logos>
+      </div>
+      <div class="sounds-interesting">
+        Sounds interesting?
+      </div>
+      <button class="button-job">Find Me a Job</button>
+      <div class="button-employer">
+        <a
+        routerLink="company/signup" routerLinkActive="active"
+        >I'm an employer</a>
+      </div>
+      <div class="line"></div>
+      <div class="term-and-legal">
+        2021 DevStack GmbH. Privacy, Terms and Legal
+      </div>
+    </div>
+
+  </section>
+
+</div>

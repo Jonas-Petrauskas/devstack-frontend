@@ -1,0 +1,46 @@
+
+<div class="signup">
+
+  <form class="signup__form">
+
+    <div class="signup__title">Get in Touch</div>
+
+    <input
+      required
+      type="text"
+      class="signup__form__line"
+      placeholder="Company name"
+      name="companyName"
+      [(ngModel)]="form.companyName"
+    >
+
+    <input
+      required
+      type="email"
+      class="signup__form__line"
+      placeholder="Email"
+      name="email"
+      [(ngModel)]="form.email"
+    >
+
+    <textarea
+      rows="5"
+      class="signup__form__textbox"
+      placeholder="Message"
+      name="message"
+      [(ngModel)]="form.message"
+    ></textarea>
+
+    <button (click)="submit()">Send</button>
+
+  </form>
+
+</div>
+
+<div *ngIf="renderConfirmation" class="blurred-background" (click)="hideConfirmation()">
+  <div class="form-confirmation">
+    <div class="text">Thank you for submitting your application!</div>
+    <div class="text">We will be in touch</div>
+    <div class="secondary-text">click anywhere to continue</div>
+  </div>
+</div>

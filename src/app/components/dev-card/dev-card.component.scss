@@ -1,0 +1,242 @@
+@use '../../../themes/components' as components;
+
+.button {
+  cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  width: 63vw;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  min-width: 546px;
+  @include components.container_style;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.photo-name {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  margin-top: 3vh;
+}
+
+.user-photo {
+  height: 120px;
+  width: 120px;
+  padding: .5rem;
+  border-radius: 5rem;
+  margin-top: 3vh;
+  margin-left: 6vh;
+
+}
+
+.carreer-details {
+  display: inline-flex;
+  margin-top: 2vh;
+  font-size: 20px;
+  
+}
+
+.name-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 34vw;
+  height: 25vh;
+  margin-top: 1vh;
+  
+}
+
+
+.names {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 3.5vh;
+  margin-top: 22px;
+  margin: 0 1px;
+  div {
+    margin: 0 3px;
+  }
+  .new-chat-bttn {
+    height: 22px;
+    width: 22px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  a {
+    font-size: 32;
+    margin-left: .5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.exp-position {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  margin: .5rem;
+  height: .5vh;
+}
+
+.exp-item {
+  margin-left: 1vw;
+}
+
+.techs-container {
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tech-image {
+  height: 50px;
+  width: 50px;
+}
+
+.expand {
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio {
+  margin-top: .5rem;
+  text-align: center;
+  padding: .5rem;
+  max-width: 429px;
+  .about {
+    margin:8px 0;
+    font-size: 17px;
+  }
+
+}
+
+.techs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 55vw;
+}
+
+.tech {
+  flex: 1;
+  padding:0 1vw;
+  
+}
+
+.bioButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 110px;
+  border-radius: 4px;
+  // background-color: #cbd1d79e;
+}
+
+.bioButton:hover {
+  background-color: #cbd1d79e;
+
+}
+
+.arrow {
+  padding-bottom: 6px;
+  margin-left: 3px;
+  width: 23px;
+  margin-top: 6px;
+  transition: all .5s;
+
+}
+
+.arrow-down {
+  padding-bottom: 6px;
+  margin-left: 3px;
+  width: 23px;
+  margin-bottom: 6px;
+  transform: scaleY(-1);
+  transition: all .5s;
+}
+
+.career {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 90%;
+  .exp {font-size: 21px;}
+}
+
+.carreerButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 115px;
+  border-radius: 4px;
+  background-color: #cbd1d79e;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.carreer-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+  .job {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px ;
+    border-bottom: 1px solid #21212152;
+    .section {
+      margin: 5px;
+    }
+    .job-company { font-size: 17px;}
+    .job-title { font-size: 15px;}
+    .job-length {
+      font-size: 13px;
+      display: flex;
+      flex-direction: row;
+      .div {
+        margin: 0 2px;
+      }
+    }
+
+  }
+
+}

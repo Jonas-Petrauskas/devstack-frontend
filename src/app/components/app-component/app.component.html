@@ -1,0 +1,12 @@
+<img
+  src="../../../assets/img/enes-f-DvU93UhTs-unsplash.jpg"
+  alt="snowy mountains"
+  class="background-img"
+>
+<div class="navbar">
+  <app-navbar [blurBackground]="blurNavbar"></app-navbar>
+</div>
+
+<div class="app-container" (scroll)="onWindowScroll()">
+  <router-outlet></router-outlet>
+</div>

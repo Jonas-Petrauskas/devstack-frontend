@@ -1,0 +1,17 @@
+@use "../../../themes/sizes" as size;
+@use "../../../themes/components" as components;
+
+.background-img {
+  position: fixed;
+  width: 100%;
+  min-width: 1000px;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}

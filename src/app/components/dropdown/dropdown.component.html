@@ -1,0 +1,19 @@
+<div class="dropdown">
+  
+  <div class="selector">
+    <div class="selector-name" (click)="toggleVisibility()">{{selectorName}} ⌄</div>
+    
+    <div *ngIf="isVisible">
+      <div *ngFor="let options of dropOptions">
+        <div class="option" (click)="updateSelected(options)">{{options.name}}</div>
+      </div>
+    </div>
+
+    <ul>
+      
+    </ul>
+  </div>
+  
+
+
+</div>
