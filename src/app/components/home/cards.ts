@@ -10,7 +10,7 @@ export const card2 = {
   "name": "Mohamed Boudra",
   "title": "Full Stack Developer",
   "description": "I specialize in product development, team building, project management and full-stack software development in Elixir/OTP, Elm and Javascript.",
-  "photoPath": "https://ca.slack-edge.com/T0WU5R8NT-UU3FJ9XA4-84f401a73723-512"
+  "photoPath": "https://firebasestorage.googleapis.com/v0/b/devstack-project.appspot.com/o/1603903308032.jpg?alt=media&token=4878a6e1-70d7-4210-ab4c-385b42bf4d9f"
 }
 
 export const card3 = {
